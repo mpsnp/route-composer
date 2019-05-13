@@ -25,7 +25,7 @@ public struct DefaultRouter: InterceptableRouter, MainThreadChecking {
     ///   - logger: A `Logger` instance to be used by the `DefaultRouter`.
     ///   - containerAdapterProvider: A `ContainerAdapterProvider` instance to be used by the `DefaultRouter`.
     public init(logger: Logger? = nil,
-                containerAdapterProvider: ContainerAdapterProvider = ContainerAdapterRegistry.shared) {
+                containerAdapterProvider: ContainerAdapterProvider = DefaultContainerAdapterProvider()) {
         self.logger = logger
         self.containerAdapterProvider = containerAdapterProvider
     }
